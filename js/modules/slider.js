@@ -42,7 +42,7 @@ const slider = () => {
             slides[currentSlide].style.display = "none";
         }
 
-        showSlide(1);
+        showSlide(0);
         if (prevButtonSelector && nextButtonSelector) {
             const prevButton = document.querySelector(prevButtonSelector);
             const nextButton = document.querySelector(nextButtonSelector);
