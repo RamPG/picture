@@ -4,6 +4,7 @@ import showStyles from "./modules/showStyles";
 import calc from "./modules/calc";
 import filter from "./modules/filter";
 import imageHover from "./modules/imageHover";
+import accordion from "./modules/accordion";
 
 window.addEventListener('DOMContentLoaded', () => {
     modals();
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showStyles(".button-transparent", ".hidden-lg", "#styles > div > div");
     calc("#size", "#material", "#options", ".promocode", ".calc-price");
     filter();
-    imageHover()
+    imageHover();
+    accordion();
     // forms("form");
 });
