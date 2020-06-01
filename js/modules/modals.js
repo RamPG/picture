@@ -1,5 +1,9 @@
 const modals = () => {
     let notPress = true;
+    const popupList = document.querySelectorAll("[data-modal]");
+    popupList.forEach((item) => {
+        item.style.display = "none";
+    });
 
     function bindModal(triggerSelector, modalSelector, closeSelectors) {
         const trigger = document.querySelectorAll(triggerSelector);
@@ -36,11 +40,11 @@ const modals = () => {
 
     function showModalByTime(selector, time) {
         setTimeout(() => {
-            let flag = false;
+            let flag = true;
             const popupList = document.querySelectorAll("[data-modal]");
             for (let i = 0; i < popupList.length; i++) {
-                if (getComputedStyle(popupList[i]).display === "block") {
-                    flag = true;
+                if (popupList[i].style.display === "block") {
+                    flag = false;
                     break;
                 }
             }
@@ -71,7 +75,7 @@ const modals = () => {
     bindModal(".button-design", ".popup-design", [".popup-close"]);
     bindModal(".button-consultation", ".popup-consultation", [".popup-close"]);
     gift(".fixed-gift", ".popup-gift", [".popup-close"]);
-    showModalByTime(".popup-consultation", 10000);
+    showModalByTime(".popup-consultation", 5000);
     openByScroll('.fixed-gift');
 };
 
