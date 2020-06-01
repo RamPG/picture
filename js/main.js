@@ -5,7 +5,7 @@ import calc from "./modules/calc";
 import filter from "./modules/filter";
 import imageHover from "./modules/imageHover";
 import accordion from "./modules/accordion";
-
+import burger from "./modules/burger";
 window.addEventListener('DOMContentLoaded', () => {
     modals();
     slider();
@@ -14,5 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     filter();
     imageHover();
     accordion();
+    burger();
     // forms("form");
 });
