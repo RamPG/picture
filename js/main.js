@@ -6,6 +6,8 @@ import filter from "./modules/filter";
 import imageHover from "./modules/imageHover";
 import accordion from "./modules/accordion";
 import burger from "./modules/burger";
+import scrollSmooth from "./modules/scroll";
+
 window.addEventListener('DOMContentLoaded', () => {
     modals();
     slider();
@@ -15,5 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
     imageHover();
     accordion();
     burger();
+    scrollSmooth();
     // forms("form");
 });
