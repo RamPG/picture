@@ -6,15 +6,21 @@ const forms = () => {
     const statusMessageBlock = document.createElement('div');
     const statusVisualMessage = document.createElement("img");
     const statusTextMessage = document.createElement("p");
-    function clearInputs (form) {
+
+    function clearInputs(form) {
         form.querySelectorAll("input").forEach((item) => {
             item.value = "";
-            form.querySelector(".file_upload > div").textContent = "Файл не выбран";
+            try {
+                form.querySelector(".file_upload > div").textContent = "Файл не выбран"; 
+            }
+            catch (e) {}
+
         })
         form.querySelectorAll("textarea").forEach((item) => {
             item.value = "";
         })
     }
+
     statusVisualMessage.classList.add("animated", "fadeInUp");
     statusMessageBlock.classList.add("animated", "fadeInUp");
 
@@ -52,7 +58,6 @@ const forms = () => {
                 .then((res) => {
                     statusMessage.querySelector("img").src = messages.successVisual;
                     statusMessage.querySelector("p").textContent = messages.success;
-                    console.log(res);
                 })
                 .catch(() => {
                     statusMessage.querySelector("img").src = messages.failureVisual;
